@@ -11,6 +11,11 @@ import (
 	"github.com/clevergo/clevergo"
 )
 
+// GetIdentity retrieves a authenticated identity from context.
+func GetIdentity(c *clevergo.Context) auth.Identity {
+	return auth.GetIdentity(c.Request.Context())
+}
+
 // New returns a middleware with the given authenticator.
 func New(authenticator auth.Authenticator) clevergo.MiddlewareFunc {
 	return func(next clevergo.Handle) clevergo.Handle {

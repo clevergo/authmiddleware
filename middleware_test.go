@@ -35,6 +35,16 @@ func (na *nullAuthenticator) Authenticate(*http.Request, http.ResponseWriter) (a
 func (na *nullAuthenticator) Challenge(*http.Request, http.ResponseWriter) {
 }
 
+func TestGetIdentity(t *testing.T) {
+	r := httptest.NewRequest(http.MethodGet, "/", nil)
+	ctx := &clevergo.Context{
+		Request: r,
+	}
+	identity := nullIdentity{}
+	ctx.WithValue(auth.IdentityKey, identity)
+	assert.Equal(t, identity, GetIdentity(ctx))
+}
+
 func TestNew(t *testing.T) {
 	cases := []struct {
 		authenticated bool
