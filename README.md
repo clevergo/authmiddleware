@@ -16,6 +16,7 @@ import (
 ```
 
 ```go
+var store auth.IdentityStore
 authenticator := authenticators.NewBasicAuth(store)
 router.Use(authmidware.New(authenticator))
 ```
