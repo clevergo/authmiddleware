@@ -12,11 +12,15 @@ import (
     "clevergo.tech/auth"
     "clevergo.tech/auth/authenticators"
     "clevergo.tech/authmidware"
+    "clevergo.tech/clevergo"
 )
 ```
 
 ```go
 var store auth.IdentityStore
 authenticator := authenticators.NewBasicAuth(store)
-router.Use(authmidware.New(authenticator))
+app := clevergo.New()
+app.Use(authmidware.New(authenticator))
 ```
+
+Checkout [example](https://github.com/clevergo/examples/tree/master/auth) for details.
