@@ -1,9 +1,9 @@
-module github.com/clevergo/authmidware
+module clevergo.tech/authmidware
 
 go 1.13
 
 require (
-	github.com/clevergo/auth v0.3.0
-	github.com/clevergo/clevergo v1.12.2
+	clevergo.tech/auth v0.1.0
+	clevergo.tech/clevergo v0.1.0
 	github.com/stretchr/testify v1.5.1
 )

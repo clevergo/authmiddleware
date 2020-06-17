@@ -1,18 +1,17 @@
 # CleverGo Authentication Middleware
 [![Build Status](https://travis-ci.org/clevergo/authmidware.svg?branch=master)](https://travis-ci.org/clevergo/authmidware)
 [![Coverage Status](https://coveralls.io/repos/github/clevergo/authmidware/badge.svg?branch=master)](https://coveralls.io/github/clevergo/authmidware?branch=master)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/clevergo/authmidware)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/clevergo.tech/authmidware?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/authmidware)](https://goreportcard.com/report/github.com/clevergo/authmidware)
 [![Release](https://img.shields.io/github/release/clevergo/authmidware.svg?style=flat-square)](https://github.com/clevergo/authmidware/releases)
-[![Sourcegraph](https://sourcegraph.com/github.com/clevergo/authmidware/-/badge.svg)](https://sourcegraph.com/github.com/clevergo/authmidware?badge)
 
 ## Usage
 
 ```go
 import (
-    "github.com/clevergo/auth"
-    "github.com/clevergo/auth/authenticators"
-    "github.com/clevergo/authmidware"
+    "clevergo.tech/auth"
+    "clevergo.tech/auth/authenticators"
+    "clevergo.tech/authmidware"
 )
 ```
 

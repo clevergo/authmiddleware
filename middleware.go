@@ -7,8 +7,8 @@ package authmidware
 import (
 	"log"
 
-	"github.com/clevergo/auth"
-	"github.com/clevergo/clevergo"
+	"clevergo.tech/auth"
+	"clevergo.tech/clevergo"
 )
 
 // GetIdentity retrieves a authenticated identity from context.
