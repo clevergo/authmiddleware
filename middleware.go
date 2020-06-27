@@ -5,6 +5,7 @@
 package authmidware
 
 import (
+	"context"
 	"log"
 
 	"clevergo.tech/auth"
@@ -12,8 +13,8 @@ import (
 )
 
 // GetIdentity retrieves a authenticated identity from context.
-func GetIdentity(c *clevergo.Context) auth.Identity {
-	return auth.GetIdentity(c.Request.Context())
+func GetIdentity(ctx context.Context) auth.Identity {
+	return auth.GetIdentity(ctx)
 }
 
 // New returns a middleware with the given authenticator.

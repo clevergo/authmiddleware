@@ -5,6 +5,7 @@
 package authmidware
 
 import (
+	"context"
 	"errors"
 	"net/http"
 	"net/http/httptest"
@@ -37,12 +38,9 @@ func (na *nullAuthenticator) Challenge(*http.Request, http.ResponseWriter) {
 
 func TestGetIdentity(t *testing.T) {
 	r := httptest.NewRequest(http.MethodGet, "/", nil)
-	ctx := &clevergo.Context{
-		Request: r,
-	}
 	identity := nullIdentity{}
-	ctx.WithValue(auth.IdentityKey, identity)
-	assert.Equal(t, identity, GetIdentity(ctx))
+	r = r.WithContext(context.WithValue(r.Context(), auth.IdentityKey, identity))
+	assert.Equal(t, identity, GetIdentity(r.Context()))
 }
 
 func TestNew(t *testing.T) {
