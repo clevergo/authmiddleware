@@ -1,9 +1,9 @@
 # CleverGo Authentication Middleware
-[![Build Status](https://img.shields.io/travis/clevergo/authmidware?style=for-the-badge)](https://travis-ci.org/clevergo/authmidware)
-[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/authmidware?style=for-the-badge)](https://coveralls.io/github/clevergo/authmidware?branch=master)
-[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/authmidware?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/authmidware?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/authmidware)
-[![Release](https://img.shields.io/github/release/clevergo/authmidware.svg?style=for-the-badge)](https://github.com/clevergo/authmidware/releases)
+[![Build Status](https://img.shields.io/travis/clevergo/authmiddleware?style=for-the-badge)](https://travis-ci.org/clevergo/authmiddleware)
+[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/authmiddleware?style=for-the-badge)](https://coveralls.io/github/clevergo/authmiddleware?branch=master)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/authmiddleware?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/authmiddleware?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/authmiddleware)
+[![Release](https://img.shields.io/github/release/clevergo/authmiddleware.svg?style=for-the-badge)](https://github.com/clevergo/authmiddleware/releases)
 
 ## Usage
 
@@ -11,7 +11,7 @@
 import (
     "clevergo.tech/auth"
     "clevergo.tech/auth/authenticators"
-    "clevergo.tech/authmidware"
+    "clevergo.tech/authmiddleware"
     "clevergo.tech/clevergo"
 )
 ```
@@ -20,7 +20,7 @@ import (
 var store auth.IdentityStore
 authenticator := authenticators.NewBasicAuth(store)
 app := clevergo.New()
-app.Use(authmidware.New(authenticator))
+app.Use(authmiddleware.New(authenticator))
 ```
 
 Checkout [example](https://github.com/clevergo/examples/tree/master/auth) for details.

@@ -1,4 +1,4 @@
-module clevergo.tech/authmidware
+module clevergo.tech/authmiddleware
 
 go 1.13
 
